@@ -36,17 +36,21 @@ jobs:
     # Terraformのセットアップ（共通処理っぽい）
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
+      working-directory: ../../../environment/develop
       with:
         terraform_version: 1.5.7  # ここは必要なバージョンに合わせて！
 
     # Terraform init
     - name: Terraform Init
       run: terraform init
+      working-directory: ../../../environment/develop
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
+      working-directory: ../../../environment/develop
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
+      working-directory: ../../../environment/develop
