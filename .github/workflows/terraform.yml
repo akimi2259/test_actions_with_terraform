@@ -45,6 +45,14 @@ jobs:
       run: terraform init
       working-directory: ./environment/develop/
 
+    - name: pwd
+      run: pwd
+      working-directory: ./environment/develop/
+
+    - name: ls
+      run: ls -la
+      working-directory: ./environment/develop/
+
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
