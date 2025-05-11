@@ -20,8 +20,8 @@ module "vpc" {
 }
 
 # create a private subnet
-module "private_subnet" {
-    source = "../../modules/private_subnet"
+module "subnet" {
+    source = "../../modules/subnet"
 }
 
 # create a s3 bucket
