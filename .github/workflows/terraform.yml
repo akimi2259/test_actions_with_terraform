@@ -36,7 +36,6 @@ jobs:
     # Terraformのセットアップ（共通処理っぽい）
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
-      working-directory: ./environment/develop/
       with:
         terraform_version: 1.5.7  # ここは必要なバージョンに合わせて！
 
