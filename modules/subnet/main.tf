@@ -1,6 +1,6 @@
 # create private subnet resource
 resource "aws_subnet" "private_subnet" {
-  vpc_id            = aws_vpc.vpc.id
+  vpc_id            = module.vpc.vpc_id
   cidr_block        = var.subnet_cidr_block
 
   tags = {
